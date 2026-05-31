@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Arduino temporary files
+*.tmp
+
+# Build artifacts
+build/
+dist/
+
+# Logs
+*.log
