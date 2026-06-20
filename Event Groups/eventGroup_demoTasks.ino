@@ -40,7 +40,7 @@ void mainTask(void *pvParameters) {
   xEventGroupWaitBits(
     myEventGroup,  // event group name
     sensorBit | wifiBit, // waiting on these bits
-    pdFALSE, // dont clear bits
+    pdFALSE, // dont clear bits -> for state (Use pdTRUE if bits are representing one time event)
     pdTRUE, // wait for all bits (use pdFALSE if want only any of bit)
     portMAX_DELAY // wait forever
   );
