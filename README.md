@@ -1,125 +1,45 @@
-# FreeRTOS Learning Repository
+# FreeRTOS Examples (ESP32)
 
-A structured collection of FreeRTOS examples built on the ESP32 platform.
+This repository is a compact, hands-on collection of FreeRTOS examples targeted at learners and embedded practitioners using the ESP32 (Arduino) platform. Each numbered folder focuses on a small FreeRTOS concept with a working `.ino` sketch you can load to your board.
 
-This repository documents my journey of learning Real-Time Operating Systems (RTOS) from first principles through small, focused, hands-on projects. Each folder covers a specific FreeRTOS concept and contains working code examples that can be directly tested on ESP32 hardware.
+## Quick Start
 
-## Learning Objectives
+- Prerequisites: ESP32 development board, Arduino IDE or PlatformIO.
+- In Arduino IDE: Install the ESP32 board support and open the `.ino` file for a lesson.
+- In PlatformIO: create a project for your ESP32 board and add the lesson `.ino` files to `src/` or use them as examples.
 
-Understand how multitasking works in embedded systems
-
-Learn task scheduling and context switching
-
-Explore inter-task communication mechanisms
-
-Implement synchronization techniques
-
-Build a strong foundation for Industrial IoT and Embedded Systems development
+Build and upload from the IDE as you normally would for an ESP32 board.
 
 ## Repository Structure
 
-01_tasks_intro/
+- `01_tasks_intro/` — Basic task creation and scheduling (`create_tasks.ino`).
+- `02_semaphores/` — Semaphore usage and interrupt-safe signaling (`semaphore_interrupt.ino`).
+- `03_mutex/` — Mutex examples for protecting shared resources (`mutex.ino`).
+- `04_queues/` — Message passing using queues (`queue_data_singleSensor.ino`).
+- `05_event_groups/` — Event group patterns for task synchronization (`eventGroup_demoTasks.ino`).
+- `06_task_notifications/` — Lightweight notifications between tasks (`distance_alert_notification.ino`).
+- `07_software_timers/` — Using FreeRTOS software timers (`software_timers.ino`).
 
-02_semaphores/
+## What You'll Learn
 
-03_mutex/
+- How to create and manage FreeRTOS tasks.
+- Inter-task communication: queues, notifications, event groups.
+- Synchronization primitives: semaphores and mutexes.
+- Using software timers for periodic actions.
 
-04_queues/
+## Notes on Platforms
 
-05_event_groups/
+- Arduino IDE: Examples are written as sketches — open the `.ino` in each folder and upload to the ESP32.
+- PlatformIO: Use the ESP32 platform and either copy the sketch into a `src/` main file or adapt it into a C++ project file.
 
-06_task_notifications/
+## Contributing
 
-07_software_timers/
+If you'd like to add examples, open a pull request. Keep changes focused (one concept per folder) and include a short explanation of the lesson and tested board.
 
-## Topics Covered
+## License
 
-### Task Management
+This repository is provided for learning purposes. Add an explicit license file if you want to allow reuse.
 
-Task Creation
+---
 
-Task States
-
-Task Scheduling
-
-Task Priorities
-
-Context Switching
-
-### Inter-Task Communication
-
-Queues
-
-Task Notifications
-
-### Synchronization
-
-Binary Semaphores
-
-Counting Semaphores
-
-Mutexes
-
-Event Groups
-
-### Timing Services
-
-Software Timers
-
-## Hardware & Software
-
-### Hardware
-
-ESP32 Development Board
-
-### Software
-
-Arduino IDE
-
-FreeRTOS (ESP32 Built-in)
-
-## Why This Repository?
-
-Most FreeRTOS tutorials focus mainly on API usage. The goal of this repository is to understand:
-
-Why RTOS is needed
-
-Problems solved by multitasking
-
-How tasks are scheduled
-
-How synchronization prevents resource conflicts
-
-How FreeRTOS is used in real embedded and IoT systems
-
-## Future Additions
-
-Producer-Consumer Problem
-
-FreeRTOS Watchdog Example
-
-Multi-Sensor Monitoring System
-
-Real-Time Data Logging
-
-ESP32 IoT Applications
-
-Industrial Automation Mini Projects
-
-## Author
-
-Vishal
-
-Instrumentation & Control Engineering Student
-
-Interests
-
-Embedded Systems
-
-Industrial Automation
-
-Control Systems
-
-Industrial IoT
-
-FreeRTOS
+Author: Vishal
